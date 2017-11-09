@@ -9,7 +9,7 @@ Synopsis
 
 ::
 
-    embed <TEST_NAME>
+    embed <TEST_NAME> <FILE_PATH?>
     
            OR
     
@@ -18,6 +18,7 @@ Synopsis
 Description
 ================
 
+Run run either of the above commands in the *CDE Shell* to obtain an embed link. 
 Embed allows you to place runnable code snippets into your HTML page. Use an iframe
 in your HTML page and set the src attribute to the URL obtained with above command. 
 
@@ -29,28 +30,5 @@ in your HTML page and set the src attribute to the URL obtained with above comma
 Arguments
 ================
 
-.. cmdoption:: test_name
-This argument must be the name of an existing test. 
-In the example below, hw-1 is a valid test name because it exists in the config.yml
-
-.. code-block:: yaml
-    :emphasize-lines: 1
-
-    hw-1:
-        id: NWExMWQ5OTA4NDAzYzFlYTQxYzJmZTQ5MWI0OGUzMjMjaHctMQ==
-        path: "/hw-1"
-        test:
-            environment: python:2.7.9
-            script: test.sh
-            command: "cmake CMakeLists.txt && make && ./runTests"
-            assets:
-                - CMakeLists.txt
-            template: "Score: {{ score }}"
-        output:
-            filename: _output
-            format: csv
-            template: "{{ id }} {{ score }}"
-
 .. cmdoption:: file_path
-This argument must be the relative path of an existing file. Paths to a folder will not be allowed.
-
+Denotes which file to show initially; this argument must be the relative path of an existing file.

@@ -11,16 +11,24 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     :glob:
     
     introduction/overview
-    introduction/projects
     introduction/cde-shell
     introduction/groups
     introduction/permissions
+    introduction/projects
+    
+.. toctree::
+    :caption: How To
+    :maxdepth: 1
+    :glob:
+    
+    how-to/run-test
     
 .. toctree::
     :caption: Features
     :maxdepth: 1
     :glob:
     
+    features/courses
     features/embed
     features/terminal
     features/web
@@ -30,9 +38,7 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     :maxdepth: 1
     :glob:
     
-    features/test
     features/custom
-    features/score
 
 .. toctree::  
     :caption: Misc

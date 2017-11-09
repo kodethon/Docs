@@ -5,6 +5,11 @@ Auto-test
 
 .. contents:: Table of Contents 
 
+Pre-requisite
+================
+
+A project should have been created and that the commands below are run in the project.
+
 Synopsis
 ================
 
@@ -17,11 +22,11 @@ Synopsis
 Description
 ================
 
-.. figure:: static/yi_jing_01_chien.jpg
+.. figure:: ../static/test-structure.png
     :align: right
     :figwidth: 200px
 
-    **Figure 1.** This is a caption for a figure.
+    **Figure 1.** Structure of a test
 
 Open the *CDE Shell* and run:
 
@@ -86,8 +91,19 @@ The test component is where you describe how your test should be run and takes t
 A valid Kodethon environment of the form *environment:tag* that is available within
 the project's settings.
 
-
-
+    - python:2.7.9  or python:3.0.0
+    - c:5.4.0
+    - go:1.3.3
+    - java:1.8.0
+    - javascript:node-5.6.0
+    - lisp:common-2.49
+    - php:5.6.24
+    - prolog:gnu-1.4.4 or prolog:swi-7.4.1
+    - r:3.2.3
+    - ruby:2.2.3
+    - rust:1.11.0
+    - swift:2.2
+    
 .. cmdoption:: script
 The path to your test script relative to your files. e.g. tests.cpp
 
@@ -109,6 +125,20 @@ and the JSON output is "{id: 1, score: 44}" then the processed result will be:
 :: 
 
     "Score: 44"
+    
+If the template were instead:
+
+::
+
+    "{{ header }} {{ id }} {{ score }}"
+
+then the processed result using the same JSON output will be:
+
+:: 
+
+    " 1 44"
+    
+because the header keyword does not exist in the JSON output but id and score do.
 
 .. cmdoption:: assets
 An **optional** array of file paths relative to your test folder that will be soft linked into

@@ -2,8 +2,8 @@
 CDE Shell
 *******************
 
-.. image:: ../static/screen_desktop.png
-   :width: 500px
+.. image:: ../static/cde-shell.PNG
+   :width: 100%
    :height: 400px
    :scale: 100 %
    :alt: alternate text

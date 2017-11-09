@@ -13,7 +13,7 @@ Permissions
 --------------------
 
 Projects in a group will retain their permission; this means that
-if collaborator permission for read, write or execute is enabled but
+if permission for read, write or execute is enabled for collaborators but
 the respective permission is disabled for everyone, members in your 
 group still have the authorization to perform the action.
 
