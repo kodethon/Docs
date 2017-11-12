@@ -1,5 +1,5 @@
 *******************
-CDE Shell
+Shell
 *******************
 
 .. image:: ../static/cde-shell.PNG

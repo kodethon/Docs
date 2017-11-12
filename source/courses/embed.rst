@@ -11,14 +11,10 @@ Synopsis
 
     embed <TEST_NAME> <FILE_PATH?>
     
-           OR
-    
-    embed <FILE_PATH>
-    
 Description
 ================
 
-Run run either of the above commands in the *CDE Shell* to obtain an embed link. 
+Run the above command in the *CDE Shell* to obtain an embed link. 
 Embed allows you to place runnable code snippets into your HTML page. Use an iframe
 in your HTML page and set the src attribute to the URL obtained with above command. 
 

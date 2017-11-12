@@ -1,6 +1,6 @@
 
 *******************
-Courses
+How It Works
 *******************
 
 .. contents:: Table of Contents 
@@ -20,7 +20,7 @@ Assignments
     :align: center
     :figwidth: 100%
 
-    **Figure 1.** Structure of a test
+    **Figure 1.** Assignments page view
 
 An assignment is the first thing that should be created by clicking on the button outlined in red in figure 1.
 Here you can specify:
@@ -47,7 +47,6 @@ Assignment Structure Overview
         utils/
         
 - src/
-
     The src folder should contain the files you expect your users to have. It must contain a file called README.
 
 - .submissions/
@@ -84,9 +83,10 @@ Diff Test Suite
     :align: center
     :figwidth: 100%
 
-    **Figure 2.** Structure of a test
+    **Figure 2.** Test suite creation view
 
 A diff test suite is comprised of test cases. For each test case, you can specify:
+    
     1. Standard input
     2. Arguments
     3. Expected answer
@@ -119,7 +119,7 @@ Kodethon also expects that you provide:
     :align: center
     :figwidth: 100%
 
-    **Figure 2.** Structure of a test
+    **Figure 3.** Custom test settings
 
 ::
 

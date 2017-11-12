@@ -1,4 +1,3 @@
-
 *****************************
 Welcome to Kodethon's documentation!
 *****************************
@@ -11,27 +10,29 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     :glob:
     
     introduction/overview
-    introduction/cde-shell
-    introduction/groups
-    introduction/permissions
-    introduction/projects
     
 .. toctree::
-    :caption: How To
+    :caption: CDE
+    :maxdepth: 1
+    :glob:
+  
+    cde/embed
+    cde/groups
+    cde/permissions
+    cde/projects  
+    cde/shell
+    cde/terminal
+    cde/run-test
+    cde/web
+    
+.. toctree::
+    :caption: Courses
     :maxdepth: 1
     :glob:
     
-    how-to/run-test
-    
-.. toctree::
-    :caption: Features
-    :maxdepth: 1
-    :glob:
-    
-    features/courses
-    features/embed
-    features/terminal
-    features/web
+    courses/getting_started
+    courses/how_it_works
+    courses/embed
     
 .. toctree::  
     :caption: Advanced Features
