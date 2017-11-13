@@ -1,11 +1,13 @@
-# Currently Hosted At
-https://cac3b0e1f4e6832f144358395513f10158fbcb71-environ.kodethon.com/demo_docs/build/html/index.html
+# Kodethon Documentation
 
-# How to Build the Docs
-Run 'make html' in the respository root; files will be generated in the 'build' folder.
+### Currently Hosted At
+https://docs.kodethon.com
+
+### How to Build the Docs
+Run `make html` in the respository root; files will be generated in the `build/` folder.
 
 
-# Structure
+### Structure
 
 CDE
 
@@ -27,5 +29,3 @@ LMS
   * Create a course
   * Create an assignment
 
-
- 
