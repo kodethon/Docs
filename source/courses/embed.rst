@@ -10,11 +10,29 @@ Synopsis
 ::
 
     embed <TEST_NAME> <FILE_PATH?>
+
+Pre-requisite
+================
+.. figure:: ../static/courses/select-assignment.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Selecting an assignment
+
+First select an assignment by clicking in the area outlined in red in Figure 1. 
+
+.. figure:: ../static/courses/assignment-files.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 2.** Assignment information page
     
+Next access your assignment files by clicking on the button circled in red in Figure 2.
+
 Description
 ================
 
-Run the above command in the *CDE Shell* to obtain an embed link. 
+After you have accessed your assignment files, run the above command in the *CDE Shell* to obtain an embed link. 
 Embed allows you to place runnable code snippets into your HTML page. Use an iframe
 in your HTML page and set the src attribute to the URL obtained with above command. 
 
