@@ -4,7 +4,8 @@
 https://docs.kodethon.com
 
 ### How to Build the Docs
-Run `make html` in the respository root; files will be generated in the `build/` folder.
+1. Have `sphinx` installed.
+2. Run `make html` in the respository root; files will be generated in the `build/` folder.
 
 
 ### Structure
