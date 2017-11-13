@@ -15,7 +15,6 @@ A course is comprised of two components:
 
 Assignments
 ================
-
 .. figure:: ../static/courses/create-assignment.PNG
     :align: center
     :figwidth: 100%
