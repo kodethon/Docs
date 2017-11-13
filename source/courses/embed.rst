@@ -4,13 +4,6 @@ Embed
 
 .. contents:: Table of Contents
 
-Synopsis
-================
-
-::
-
-    embed <TEST_NAME> <FILE_PATH?>
-
 Pre-requisite
 ================
 .. figure:: ../static/courses/select-assignment.PNG
@@ -31,6 +24,10 @@ Next access your assignment files by clicking on the button circled in red in Fi
 
 Description
 ================
+
+::
+
+    embed <TEST_NAME> <FILE_PATH?>
 
 After you have accessed your assignment files, run the above command in the *CDE Shell* to obtain an embed link. 
 Embed allows you to place runnable code snippets into your HTML page. Use an iframe
