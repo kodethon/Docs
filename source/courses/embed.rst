@@ -22,7 +22,7 @@ First select an assignment by clicking in the area outlined in red in Figure 1.
     
 Next access your assignment files by clicking on the button circled in red in Figure 2.
 
-Description
+Usage
 ================
 
 ::
@@ -43,3 +43,9 @@ Arguments
 
 .. cmdoption:: file_path
 Denotes which file to show initially; this argument must be the relative path of an existing file.
+
+Note
+================
+
+To prevent un-wanted viewing of files, please make sure that world view permissions are disabled
+for the files. Please note that even with world view permissions disabled, files within a **src** folder will still be viewable.
