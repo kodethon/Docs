@@ -1,5 +1,5 @@
 *******************
-Embed
+Embed from Shell
 *******************
 
 .. contents:: Table of Contents
