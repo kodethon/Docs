@@ -1,6 +1,6 @@
 
 *******************
-How It Works
+Overview
 *******************
 
 .. contents:: Table of Contents 
@@ -104,16 +104,17 @@ Custom Test Suite
 
 A custom test suite allows you to upload a zip file containing relevant test files. 
 Kodethon however expects the following folders to be created:
+
     1. inputs
     2. arguments
     3. answers
     4. src (Containing initial files you would like your students to have)
     
 Kodethon also expects that you provide:
-    1. Test Script
-    2. Test Command
-    3. Return Template
 
+    1. Test Command
+    2. On Start Command (Optional)
+    
 .. figure:: ../static/courses/custom-test-suite.PNG
     :align: center
     :figwidth: 100%
@@ -122,29 +123,5 @@ Kodethon also expects that you provide:
 
 ::
 
-You also have the option of providing an 'On Start Command' that will be run when the student copies the assignment.
-
-Finall, you have the option of providing a return template that uses your test script's output JSON. 
-For example, given a template of:
-
-    "Score: {{ score }}"
-    
-and the JSON output is "{id: 1, score: 44}" then the processed result will be:
-
-:: 
-
-    "Score: 44"
-    
-If the template were instead:
-
-::
-
-    "{{ header }} {{ id }} {{ score }}"
-
-then the processed result using the same JSON output will be:
-
-:: 
-
-    " 1 44"
-    
-because the header keyword does not exist in the JSON output but id and score do.
+You also have the option of providing an **On Start Command** that will be run when the student views or copies the assignment.
+This setting can be used to generate **Dynamic Problems**; please read this section for more details.
