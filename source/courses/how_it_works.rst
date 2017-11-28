@@ -36,9 +36,9 @@ Assignment Structure Overview
 
 .. code-block:: yaml
 
-    src/
     .submissions/
     test-name/
+        src/
         YOUR_TEST_SCRIPT
         answers/
         inputs/
