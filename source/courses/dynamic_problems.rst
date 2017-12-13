@@ -23,13 +23,12 @@ The file will be of JSON format as shown below:
         last_name: "Doe",
         email: "sample@gmail.com",
         timestamp: "2017-11-26 23:21:02 -0800",
-        previous_submissions: [
+        previous: [
             {
-                output: "Hello World!",
-                cache: "<DATA DEFINED BY YOU>",
-                remaining_attempts: 5,
+                description: "<PREVIOUS PROBLEM DESCRIPTION>",
                 created_at: "2017-11-25 23:21:02 -0800",
-                score: 100
+                updated_at: "2017-11-25 23:21:02 -0800",
+                data: "<PREVIOUS DATA>"
             },
             ...
         ]
@@ -53,5 +52,5 @@ Planned Expected Output
     {
         description: "<YOUR PROBLEM DESCRIPTION>",
         display_format: "(input, mc, program)",
-        metadata: "<ASSOCIATED DATA FOR DISPLAY FORMAT>"
+        data: "<ASSOCIATED DATA FOR DISPLAY FORMAT>"
     }
