@@ -1,5 +1,5 @@
 *******************
-Grading
+Custom Grading
 *******************
 
 .. contents:: Table of Contents
@@ -7,10 +7,6 @@ Grading
 Description
 ================
 
-Grading of an assignment currently the responsibility of the students to complete before the assignment deadline. Instructions for
-grading an assignment will be provided in the default problem **how-to-grade.txt** file. 
-We plan to support instructor initiated grading in the future. 
- 
 Expected Output
 ================
 
@@ -52,7 +48,7 @@ The file will be of JSON format as shown below:
             },
             ...
         ],
-        "on_start": {
+        on_start: {
             "description": "<DESCRIPTION OF PROBLEM>",
             "created_at": "2017-12-08T05:31:49.093Z",
             "updated_at": "2017-12-13T11:19:11.970Z",
