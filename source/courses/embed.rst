@@ -1,11 +1,24 @@
-*******************
-Embed from Shell
-*******************
+*****
+Embed
+*****
 
 .. contents:: Table of Contents
 
-Pre-requisite
-================
+Description
+===========
+
+Problems can be embeded into HTML or markdown pages. 
+Students who access the page can submit solutions and have it graded from by your Kodethon course.
+There are two ways to get the embed link:
+
+Embedding from Problems Page
+============================
+
+In the problems page, there should be a *Share* button. Click the *Share* button and copy the link.
+
+Embedding from CDE Shell
+========================
+
 .. figure:: ../static/courses/select-assignment.PNG
     :align: center
     :figwidth: 100%
@@ -23,7 +36,7 @@ First select an assignment by clicking in the area outlined in red in Figure 1.
 Next access your assignment files by clicking on the button circled in red in Figure 2.
 
 Usage
-================
+-----
 
 ::
 
@@ -39,13 +52,13 @@ in your HTML page and set the src attribute to the URL obtained with above comma
     <iframe src="EMBED_LINK" height="250px" width="750px" frameBorder="0"></iframe>
     
 Arguments
-================
+---------
 
 .. cmdoption:: file_path
 Denotes which file to show initially; this argument must be the relative path of an existing file.
 
 Note
-================
+----
 
 To prevent un-wanted viewing of files, please make sure that world view permissions are disabled
 for the files. Please note that even with world view permissions disabled, files within a **src** folder will still be viewable.

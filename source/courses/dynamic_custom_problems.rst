@@ -1,5 +1,5 @@
 *******************
-Dynamic Problems
+Dynamic Custom Problems
 *******************
 
 .. contents:: Table of Contents
@@ -7,8 +7,8 @@ Dynamic Problems
 Description
 ================
 
-Dynamic problems allows an instructor to define the problem description for each student. The instructor
-can specify their dynamic problem generation script in **On Start Command** setting for **Custom** problems. The 
+Dynamic problems are a special type of a custom problem that allows an instructor to define the problem description for each student. 
+The instructor can specify their dynamic problem generation script in **On Start Command** setting for **Custom** problems. The 
 **On Start Command** will be triggered when the student copies the assignment or when they view the assignment.
 
 Metadata
@@ -41,7 +41,8 @@ The provided description will be written to a README file for the user.
 ::
 
     {
-        description: "<YOUR PROBLEM DESCRIPTION>"
+        description: "<YOUR PROBLEM DESCRIPTION>",
+        data: "<ASSOCIATED DATA FOR PROBLEM> (Optional)"
     }
 
 Planned Expected Output
@@ -51,6 +52,6 @@ Planned Expected Output
 
     {
         description: "<YOUR PROBLEM DESCRIPTION>",
+        data: "<ASSOCIATED DATA FOR PROBLEM> (Optional)"
         display_format: "(input, mc, program)",
-        data: "<ASSOCIATED DATA FOR DISPLAY FORMAT>"
     }
