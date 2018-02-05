@@ -5,14 +5,6 @@ Overview
 
 .. contents:: Table of Contents 
 
-Components
-================
-
-A course is comprised of two components:
-
-    1. Assignments
-    2. Test Suites
-
 Assignments
 ================
 .. figure:: ../static/courses/create-assignment.PNG
@@ -29,54 +21,20 @@ Here you can specify:
     
 If you happen to set the start after the current date, students within the course will not be able to see the assignment.
 
-
-Assignment Structure Overview
--------------------
-
-
-.. code-block:: yaml
-
-    .submissions/
-    test-name/
-        src/
-        YOUR_TEST_SCRIPT
-        answers/
-        inputs/
-        arguments/
-        utils/
-        
-- src/
-    The src folder should contain the files you expect your users to have. It must contain a file called README.
-
-- .submissions/
-    The submissions folder is where user submissions will be stored. 
-    Inside each submission folder will be the submitted files along with an output file with your test script's output.
-
-- test-name/YOUR_TEST_SCRIPT
-    The test script file can be any type of file that should be invoked within the command section in the config.yml
-
-- test-name/answers/
-    The folder where answer files are stored
-
-- test-name/inputs/
-    The folder where stdin files are stored
-
-- test-name/arguments/
-    The folder where argument files are stored
-
-- test-name/utils/
-    Where utility files are stored.
-
-Test Suites
+Problems
 ================
 
-An assignment is comprised of one or more test suites. Currently Kodethon supports 2 types of test suites:
+We currently support three types of problems:
 
     1. Diff
     2. Custom
+    3. Multiple Choice
 
-Diff Test Suite
--------------------
+Diff Problem 
+------------
+
+Settings
+^^^^^^^^
 
 .. figure:: ../static/courses/test-suite-settings.PNG
     :align: center
@@ -84,12 +42,14 @@ Diff Test Suite
 
     **Figure 2.** Test suite creation view
 
-A diff test suite is comprised of test cases. For each test case, you can specify:
+A diff problem is comprised of test cases. For each test case, you can specify:
     
     1. Standard input
     2. Arguments
     3. Expected answer
-    
+    4. Comment
+
+When a student submits their program for grading, Kodethon will generate a test script based on the problem settings. 
 For example, if you set standard input to be 'abc' and arguments '1 2 3' then the generated test command will look like:
 
 ::
@@ -98,22 +58,88 @@ For example, if you set standard input to be 'abc' and arguments '1 2 3' then th
 
 The specified standard input 'abc' will be written into a file called '1' and redirected into the student's program.
 
+Structure
+^^^^^^^^^
 
-Custom Test Suite
--------------------
+When a diff problem is created, we will generate the scaffold below inside the assignment files.
 
-A custom test suite allows you to upload a zip file containing relevant test files. 
-Kodethon however expects the following folders to be created:
+.. code-block:: yaml
 
-    1. inputs
-    2. arguments
-    3. answers
-    4. src (Containing initial files you would like your students to have)
-    
-Kodethon also expects that you provide:
+    .submissions/
+    test-name/
+        ADDITIONAL_TEST_FILE(s)
+        src/
+        test/
+        .submissions/
+        .snapshots/
+        .answers/
+        .inputs/
+        .arguments/
+        .utils/
+        .ref/
+ 
+- test-name/ADDITIONAL_TEST_FILE(s)
+    Adding additonal test files is completely optional. 
 
-    1. Test Command
-    2. On Start Command (Optional)
+- src/
+    The src folder should contain the files you expect your users to have.
+
+- test/
+    The test folder can optionally contain a test submission that can be used to test grading.
+
+- .submissions/
+    The submissions folder is where a student's latest submission will be stored. 
+    Inside each submission folder will be the submitted files along with an output file with your test script's output.
+
+- .snapshots/
+    The snapshots folder is where all student submissions are stored. 
+
+- test-name/.answers/
+    The folder where answer files are stored after being added in the test cases.
+
+- test-name/.inputs/
+    The folder where stdin files are stored after being added in the test cases.
+
+- test-name/.arguments/
+    The folder where argument files are stored after being added in the test cases.
+
+- test-name/.utils/
+    Where utility files are stored. This folder should not be modified.
+
+- test-name/.ref/
+    If you choose to use a reference program, the uploaded file(s) will be stored here
+
+Custom Problem
+--------------
+
+A custom problem allows you to upload a zip file containing relevant test files. 
+When a custom problem is created, we will generate the scaffold below inside the assignment files.
+
+.. code-block:: yaml
+
+    test-name/
+        YOUR_TEST_FILE(s)
+        src/
+        test/
+        .submissions/
+        .snapshots/
+ 
+- test-name/YOUR_TEST_FILE(s)
+    The test script file can be any type of file that should be invoked within the command section in the config.yml       
+
+- src/
+    The src folder should contain the files you expect your users to have. It must contain a file called README.
+
+- test/
+    The test folder can optionally contain a test submission that can be used to test grading.
+
+- .submissions/
+    The submissions folder is where a student's latest submission will be stored. 
+    Inside each submission folder will be the submitted files along with an output file with your test script's output.
+
+- .snapshots/
+    The snapshots folder is where all student submissions are stored. 
+
     
 .. figure:: ../static/courses/custom-test-suite.PNG
     :align: center
