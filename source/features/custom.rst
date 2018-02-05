@@ -13,7 +13,7 @@ Goal
 Register a node with the Kodethon master servers and verify its success
 
 Notes to the Reader
-----------------
+-------------------
 
 1. It is advisable to have experience with Docker
 
@@ -22,12 +22,12 @@ Notes to the Reader
 3. The following tabs must be completed in sequence
 
 Estimated Completion
------------------
+--------------------
 
 Approx Completion: 1 hour, 15 minutes on subsequent run throughs
 
 Getting the Production Scripts
-================
+==============================
 
 1. Download the repository at https://github.com/Jvlythical/CDE-Node
 
@@ -129,7 +129,7 @@ Getting the Production Scripts
           - 'apparmor:unconfined'
 
 Configuring the Environment
-================      
+===========================      
 
 Change directory into the repository. 
 Please note that all paths mentioned in this guide is relative to this directory.
@@ -152,7 +152,7 @@ Starting the node's core
 2. NUM_NODES should be greater than 1 and less than the number of CPU cores
 
 Verify that the core has been started
---------------------------
+-------------------------------------
 
 1. Run 'docker ps'
 2. You should see:
@@ -166,7 +166,7 @@ Verify that the core has been started
     - e.g. test-load-balancer rather than CDE-load-balancer
     
 Starting the nginx-proxy container
--------------------------------
+----------------------------------
 
 1. Change directory into the reverse-proxy folder and run start-reverse-proxy.sh
 2. The reverse proxy provides domain name to container translation
@@ -174,7 +174,7 @@ Starting the nginx-proxy container
 4. For more information: https://github.com/jwilder/nginx-proxy
 
 Adding SSL Protection to the Node
-------------------------------
+---------------------------------
 
 If you do not have your own SSL certificate:
 
@@ -182,13 +182,13 @@ If you do not have your own SSL certificate:
     2. Follow the installation instructions here: https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion
 
 Verifying Installation
--------------------------
+----------------------
 
 1. curl https://CDE_NODE_HOST where CDE_NODE_HOST should be substituted with the hostname which you set in env.yml
 2. e.g. curl https://merge.kodethon.com should respond with a 404.
 
 Port forwarding
-------------------------
+---------------
 
 1. Make sure that your public ip address and port maps to your server
 2. Guides can be found online for this step
