@@ -31,7 +31,8 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     :glob:
     
     courses/getting_started
-    courses/overview
+    courses/assignments
+    courses/problems
     courses/custom_grading
     courses/dynamic_problems
     courses/embed_via_shell
