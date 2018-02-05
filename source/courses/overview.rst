@@ -18,10 +18,11 @@ Here you can specify:
     1. Programming environment that will be used to test submissions 
     2. Start date of the assignment
     3. Due date of the assignment
+    4. Environment
     
 If you happen to set the start after the current date, students within the course will not be able to see the assignment.
 
-Problems
+Problem Types
 ================
 
 We currently support three types of problems:
@@ -30,7 +31,7 @@ We currently support three types of problems:
     2. Custom
     3. Multiple Choice
 
-Diff Problem 
+Diff
 ------------
 
 Settings
@@ -49,8 +50,8 @@ A diff problem is comprised of test cases. For each test case, you can specify:
     3. Expected answer
     4. Comment
 
-When a student submits their program for grading, Kodethon will generate a test script based on the problem settings. 
-For example, if you set standard input to be 'abc' and arguments '1 2 3' then the generated test command will look like:
+When a student submits their program for grading, Kodethon will **generate a test script** based on the problem settings and test cases. 
+For example, if you set standard input to be 'abc' and arguments '1 2 3' for **Test Case 1**, then the generated test command will look like:
 
 ::
     
@@ -109,8 +110,23 @@ When a diff problem is created, we will generate the scaffold below inside the a
 - test-name/.ref/
     If you choose to use a reference program, the uploaded file(s) will be stored here
 
-Custom Problem
+Custom
 --------------
+
+Settings
+^^^^^^^^
+
+.. figure:: ../static/courses/custom-test-suite.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 3.** Custom test settings
+
+You also have the option of providing an **On Start Command** that will be run when the student views or copies the assignment.
+This setting can be used to generate **Dynamic Problems**; please read this section for more details.
+
+Structure
+^^^^^^^^^
 
 A custom problem allows you to upload a zip file containing relevant test files. 
 When a custom problem is created, we will generate the scaffold below inside the assignment files.
@@ -140,14 +156,3 @@ When a custom problem is created, we will generate the scaffold below inside the
 - .snapshots/
     The snapshots folder is where all student submissions are stored. 
 
-    
-.. figure:: ../static/courses/custom-test-suite.PNG
-    :align: center
-    :figwidth: 100%
-
-    **Figure 3.** Custom test settings
-
-::
-
-You also have the option of providing an **On Start Command** that will be run when the student views or copies the assignment.
-This setting can be used to generate **Dynamic Problems**; please read this section for more details.
