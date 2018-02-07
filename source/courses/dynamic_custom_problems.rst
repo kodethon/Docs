@@ -36,22 +36,45 @@ The file will be of JSON format as shown below:
     
 Expected Output
 ================
-The provided description will be written to a README file for the user.
+The below format should be output to stdout as a JSON string:
 
 ::
 
     {
         description: "<YOUR PROBLEM DESCRIPTION>",
-        data: "<ASSOCIATED DATA FOR PROBLEM> (Optional)"
+        description_format: "[markdown]",
+        data: "<ASSOCIATED DATA FOR PROBLEM>",
+        data_format: "[input, mc, image]"
     }
 
-Planned Expected Output
-================
+- description
+    Text describing the problem.
 
-::
+- description_format  (Optional)
+    - default
+        The description will be rendered in a pre element. 
+    
+    - markdown    
+        The problem description will be rendered as markdown with MathJax support.
 
-    {
-        description: "<YOUR PROBLEM DESCRIPTION>",
-        data: "<ASSOCIATED DATA FOR PROBLEM> (Optional)"
-        display_format: "(input, mc, program)",
-    }
+- data  (Optional)
+    JSON encod-able object 
+
+- data_format  (Optional)
+    - image
+        If set, expects the data attribute to be of the form:
+        
+        ::
+
+            {
+                base64_str: "",
+                mime_content_type: ['jpeg', 'png', ...]
+            }
+        
+    - input
+        Not yet supported
+    
+    - mc
+        Not yet supported
+
+
