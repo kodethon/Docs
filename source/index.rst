@@ -31,7 +31,11 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     :glob:
     
     courses/getting_started
-    courses/how_it_works
+    courses/assignments
+    courses/problems_overview
+    courses/diff_problems
+    courses/custom_problems
+    courses/dynamic_custom_problems
     courses/embed
     
 .. toctree::  

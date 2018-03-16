@@ -1,10 +1,48 @@
 # Kodethon Documentation
 
-### Currently Hosted At
+This repository holds the source code for Kodethon documentation.
+
 https://docs.kodethon.com
 
+## Dependencies
+
+0. python pip
+1. Sphinx
+
+
+### Installing Pip via MacPorts
+
+```
+$ sudo port install py36-pip
+$ sudo port select --set pip pip36
+```
+
+### Installing Sphinx via MacPorts
+
+```
+$ sudo port install py36-sphinx
+```
+
+```
+$ sudo port select --set python python36
+$ sudo port select --set sphinx py36-sphinx
+```
+
+### Installing Sphinx via Homebrew 
+
+```
+$ brew install sphinx-doc
+```
+
+### Install Sphinx Dependencies via Pip
+
+```
+sudo pip install sphinxcontrib-httpdomain
+sudo pip install sphinx_rtd_theme
+```
+
 ### How to Build the Docs
-1. Have `sphinx` installed.
+1. Install dependencies.
 2. Run `make html` in the respository root; files will be generated in the `build/` folder.
 
 
