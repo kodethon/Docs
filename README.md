@@ -1,4 +1,7 @@
-# Currently Hosted At
+# Kodethon Documentation
+
+This repository holds the source code for Kodethon documentation.
+
 https://docs.kodethon.com
 
 ## Dependencies
@@ -38,11 +41,12 @@ sudo pip install sphinxcontrib-httpdomain
 sudo pip install sphinx_rtd_theme
 ```
 
-# How to Build the Docs
-Run 'make html' in the respository root; files will be generated in the 'build' folder.
+### How to Build the Docs
+1. Install dependencies.
+2. Run `make html` in the respository root; files will be generated in the `build/` folder.
 
 
-# Structure
+### Structure
 
 CDE
 
@@ -64,5 +68,3 @@ LMS
   * Create a course
   * Create an assignment
 
-
- 
