@@ -48,49 +48,48 @@ When a diff problem is created, we will generate the scaffold below inside the a
 
 .. code-block:: yaml
 
-    .submissions/
     test-name/
-        ADDITIONAL_TEST_FILE(s)
-        src/
-        test/
-        .submissions/
-        .snapshots/
-        .answers/
-        .inputs/
-        .arguments/
-        .utils/
+        autograder/
+          .answers/
+          .inputs/
+          .arguments/
+          .utils/
+        handout/
         .ref/
+        .snapshots/
+        submission/
+        .submissions/
  
-- test-name/ADDITIONAL_TEST_FILE(s)
-    Adding additonal test files is completely optional. 
+- autograder/ 
+    The folder that contains all files needed for grading a submission. 
 
-- src/
-    The src folder should contain the files you expect your users to have.
+- autograder/.answers/
+    The folder where answer files are stored after being added in the test cases.
 
-- test/
-    The test folder can optionally contain a test submission that can be used to test grading.
+- autograder/.inputs/
+    The folder where stdin files are stored after being added in the test cases.
 
-- .submissions/
-    The submissions folder is where a student's latest submission will be stored. 
-    Inside each submission folder will be the submitted files along with an output file with your test script's output.
+- autograder/.arguments/
+    The folder where argument files are stored after being added in the test cases.
+
+- autograder/.utils/
+    Where utility files are stored. This folder should not be modified.
+
+- handout/
+    The handout folder should contain the files you expect your users to have.
+
+- .ref/
+    If you choose to use a reference program, the uploaded file(s) will be stored here
 
 - .snapshots/
     The snapshots folder is where all student submissions are stored. 
 
-- test-name/.answers/
-    The folder where answer files are stored after being added in the test cases.
+- submission/
+    The submission folder can optionally contain a mock submission that can be used to test grading.
 
-- test-name/.inputs/
-    The folder where stdin files are stored after being added in the test cases.
-
-- test-name/.arguments/
-    The folder where argument files are stored after being added in the test cases.
-
-- test-name/.utils/
-    Where utility files are stored. This folder should not be modified.
-
-- test-name/.ref/
-    If you choose to use a reference program, the uploaded file(s) will be stored here
+- .submissions/
+    The submissions folder is where a student's latest submission will be stored. 
+    Inside each submission folder will be the submitted files along with an output file with your test script's output.
 
 Custom
 --------------
@@ -116,25 +115,25 @@ When a custom problem is created, we will generate the scaffold below inside the
 .. code-block:: yaml
 
     test-name/
-        YOUR_TEST_FILE(s)
-        src/
-        test/
-        .submissions/
+        autograder/
+        handout/
         .snapshots/
+        submission/
+        .submissions/
  
-- test-name/YOUR_TEST_FILE(s)
-    The test script file can be any type of file that should be invoked within the command section in the config.yml       
+- autograder/
+    The folder that contains all files needed for grading a submission. 
 
-- src/
-    The src folder should contain the files you expect your users to have. It must contain a file called README.
+- handout/
+    The handout folder should contain the files you expect your users to have. It must contain a file called README.
 
-- test/
+- .snapshots/
+    The snapshots folder is where all student submissions are stored. 
+
+- submission/
     The test folder can optionally contain a test submission that can be used to test grading.
 
 - .submissions/
     The submissions folder is where a student's latest submission will be stored. 
     Inside each submission folder will be the submitted files along with an output file with your test script's output.
-
-- .snapshots/
-    The snapshots folder is where all student submissions are stored. 
 
