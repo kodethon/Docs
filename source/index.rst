@@ -10,6 +10,19 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     :glob:
     
     introduction/overview
+
+.. toctree::
+    :caption: Courses
+    :maxdepth: 1
+    :glob:
+    
+    courses/getting_started
+    courses/assignments
+    courses/problems_overview
+    courses/diff_problems
+    courses/custom_problems
+    courses/dynamic_custom_problems
+    courses/embed
     
 .. toctree::
     :caption: CDE
@@ -23,20 +36,7 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     cde/shell
     cde/terminal
     cde/run-test
-    cde/web
-    
-.. toctree::
-    :caption: Courses
-    :maxdepth: 1
-    :glob:
-    
-    courses/getting_started
-    courses/assignments
-    courses/problems_overview
-    courses/diff_problems
-    courses/custom_problems
-    courses/dynamic_custom_problems
-    courses/embed
+    cde/web 
     
 .. toctree::  
     :caption: Advanced Features
