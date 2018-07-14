@@ -22,6 +22,7 @@ As a new user, a good starting point is our FAQ at https://support.kodethon.com/
     courses/diff_problems
     courses/custom_problems
     courses/dynamic_custom_problems
+    courses/problem_file_structure
     courses/embed
     
 .. toctree::
