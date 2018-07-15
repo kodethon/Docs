@@ -15,7 +15,7 @@ The expected answers are specified as **test cases**; each test case also option
 Components
 ==========
 
-Execution Settings
+Additional Settings
 ^^^^^^^^^^^^^^^^^^
 
 .. cmdoption:: Run Command
@@ -27,16 +27,6 @@ For example, if the submission file is expected to be called *main.py*, then the
 The init command should be a UNIX shell command used to prepare the submission for testing. This command will be only **run once**.
 
 For example, specifying *gcc main.c* as the init command will create an executable file *a.out* which can then be used by the run command. 
-
-.. cmdoption:: Execution Time
-To limit how long the submission can run for, you can specify a max execution time in
-seconds. The max execution time will be divided evenly between each test case. For example, if the max execution time was 10 seconds and there are 10 test cases, then each
-test case gets 1 second of execution time. 
-
-.. cmdoption:: Period
-To limit the rate which a submission can be made, you can specific a time in seconds.
-The submitter will receive an error message denoting how much time they have left
-before they can submit again.
 
 Problem File Structure
 ^^^^^^^^^^^^^^^^^^^^^^

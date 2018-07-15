@@ -11,8 +11,19 @@ Custom problems allows the instructor to have full **control** on what to do whe
 Please be aware that the specified test command will be run as the Linux user **nobody**. Extra caution should be made
 to ensure that proper read and write permissions have been set prior to student submission.
 
-Structure
-=========
+Components
+==========
+
+Settings
+^^^^^^^^
+
+.. cmdoption:: On Start Command
+
+.. cmdoption:: Soft Limit
+
+
+Problem File Structure
+^^^^^^^^^^^^^^^^^^^^^^
 
 When the student submits their files for grading, Kodethon will place their submission in the *submission* folder. The specified
 test command will then be executed from within the autograder folder. That is, references to the student submission files should be made 
@@ -29,10 +40,7 @@ via *../submission/FILE_NAME*
     submission/
       STUDENT_SUBMISSION_FILES
 
-Metadata.json
-=============
-
-The file will be of JSON format as shown below:
+The metadata.json file will be of JSON format as shown below:
 
 ::
 
@@ -61,7 +69,7 @@ The file will be of JSON format as shown below:
     }
 
 Expected Output
-===============
+^^^^^^^^^^^^^^^
 
 The output can either be directly output to stdout or written to *results.json* in the submissions folder.
 

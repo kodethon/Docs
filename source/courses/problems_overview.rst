@@ -56,3 +56,13 @@ Settings
 
 You also have the option of providing an **On Start Command** that will be run when the student views or copies the assignment.
 This setting can be used to generate **Dynamic Problems**; please read this section for more details.
+
+.. cmdoption:: Execution Time
+To limit how long the submission can run for, you can specify a max execution time in
+seconds. The max execution time will be divided evenly between each test case. For example, if the max execution time was 10 seconds and there are 10 test cases, then each
+test case gets 1 second of execution time. 
+
+.. cmdoption:: Period
+To limit the rate which a submission can be made, you can specific a time in seconds.
+The submitter will receive an error message denoting how much time they have left
+before they can submit again.
