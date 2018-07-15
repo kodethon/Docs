@@ -6,14 +6,6 @@ https://docs.kodethon.com
 0. python pip
 1. Sphinx
 
-
-### Installing Pip via MacPorts
-
-```
-$ sudo port install py36-pip
-$ sudo port select --set pip pip36
-```
-
 ### Installing Sphinx via MacPorts
 
 ```
@@ -31,6 +23,12 @@ $ sudo port select --set sphinx py36-sphinx
 $ brew install sphinx-doc
 ```
 
+### Installing Sphinx via apt-get
+
+```
+$ sudo apt-get install python-sphinx
+```
+
 ### Install Sphinx Dependencies via Pip
 
 ```
@@ -44,6 +42,13 @@ Run 'make html' in the respository root; files will be generated in the 'build' 
 
 # Structure
 
+Courses
+
+* Getting Started
+  * Create a problem	
+  * Create a course
+  * Create an assignment
+
 CDE
 
 * Getting Started
@@ -56,13 +61,3 @@ CDE
   * Editor
   * Shell
   * Apps
-
-LMS
-
-* Getting Started
-  * Create a problem	
-  * Create a course
-  * Create an assignment
-
-
- 
