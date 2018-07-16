@@ -2,19 +2,16 @@
 Welcome to Kodethon's documentation!
 ************************************
 
-As a new user, a good starting point is our FAQ at https://support.kodethon.com/d/7-faqs
+If you have any questions or feedback, please post them at: https://support.kodethon.com
 
 .. toctree::
     :maxdepth: 2
     :numbered: 3
     :includehidden:
     
-    introduction/index
     assignments/index
     problems/index
     editor/index
     advanced/index
-    misc/index
 
-
-:Last Reviewed: 7/24/2017
+:Last Reviewed: 7/15/2018

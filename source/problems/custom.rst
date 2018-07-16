@@ -7,9 +7,9 @@ Custom
 Description
 ===========
 
-Custom problems allows the instructor to have full **control** on what to do when the student submits files for grading. 
+Custom problems allow the creator to have **full control** on how submissions are scored. 
 Please be aware that the specified test command will be run as the Linux user **nobody**. Extra caution should be made
-to ensure that proper read and write permissions have been set prior to student submission.
+to ensure that proper read and write permissions have been set prior to submission.
 
 Components
 ==========
@@ -25,9 +25,9 @@ This command will be run once from the autograder folder as displayed in the nex
 Problem File Structure
 ^^^^^^^^^^^^^^^^^^^^^^
 
-When the student submits their files for grading, Kodethon will place their submission in the *submission* folder. The specified
-test command will then be executed from within the autograder folder. That is, references to the student submission files should be made 
-via *../submission/FILE_NAME*
+When a submission is made, Kodethon will place the submission files in the *submission* folder. The specified
+test command will then be executed from within the autograder folder. That is, references to the submission files should be made 
+via **../submission/FILE_NAME**
 
 .. code-block:: yaml
 
@@ -38,7 +38,7 @@ via *../submission/FILE_NAME*
       stdout
       stderr
     submission/
-      STUDENT_SUBMISSION_FILES
+      SUBMISSION_FILES
 
 The metadata.json file will be of JSON format as shown below:
 

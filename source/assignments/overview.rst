@@ -15,8 +15,6 @@ An assignment is the first thing that should be created by clicking on the butto
 
     **Figure 1.** Assignments page view
 
-Please note that students course will not be able to see the assignment until the current date is after the start date.
-
 An assignment consists of five components:
     1. Problems
     2. Submissions

@@ -58,10 +58,10 @@ FAQs
 What happens when a submission is made?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When the student submits their files for grading, Kodethon will place their submission in a **submission** folder located in the /home/kodethon/.staging folder.
+When a submission is made for grading, Kodethon will place their submission in a **submission** folder located in the /home/kodethon/.staging folder.
 A generated **test.sh** script will be executed from within the autograder folder. The generated test.sh script will run each specified test case and diff the
 results with the expected answer. If the answers match exactly or match given the allowed whitespace settings, then a point is awarded for the submission. 
-Below is an example of what the submission layout looks like for a student named *John Doe*:
+Below is an example of what the submission layout looks like for a user named *John Doe*:
 
 .. code-block:: text
     
@@ -70,7 +70,7 @@ Below is an example of what the submission layout looks like for a student named
       autograder/
         test.sh
       submission/
-        STUDENT_SUBMISSION_FILES
+        SUBMISSION_FILES
 
 
 The metadata.json file containers information regarding the submitter as shown below:
