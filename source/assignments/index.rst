@@ -5,4 +5,4 @@ Assignments
     :maxdepth: 1
     
     getting_started
-    assignments
+    overview

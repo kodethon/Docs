@@ -19,7 +19,13 @@ Additional Settings
 
 .. cmdoption:: On Start Command
 
+The on start command should be a UNIX shell command. It is run once when a user first views the assignment and
+every time the number of submissions hits the soft limit count.
+
 .. cmdoption:: Soft Limit
+
+To control after which submission count the on start command should be run again, set the soft limit to a value greater than 0. 
+Otherwise, this setting defaults to 0.
 
 On Start Metadata
 ^^^^^^^^^^^^^^^^^

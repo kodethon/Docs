@@ -19,6 +19,9 @@ Additional Settings
 
 .. cmdoption:: Test Command
 
+The test command should be a UNIX shell command used to initiate testing. 
+This command will be run once from the autograder folder as displayed in the next section.
+
 Problem File Structure
 ^^^^^^^^^^^^^^^^^^^^^^
 

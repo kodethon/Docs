@@ -1,10 +1,10 @@
-***********
-Assignments
-***********
+********
+Overview
+********
 
 .. contents:: Table of Contents 
 
-Overview
+Description
 -----------
 
 An assignment is the first thing that should be created by clicking on the button outlined in red in Figure 1.
