@@ -8,3 +8,5 @@ Problems
     diff
     custom
     dynamic
+    multiple-choice
+    free-response
