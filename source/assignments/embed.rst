@@ -55,6 +55,7 @@ Arguments
 ---------
 
 .. cmdoption:: file_path
+
 Denotes which file to show initially; this argument must be the relative path of an existing file.
 
 Note

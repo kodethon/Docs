@@ -1,6 +1,19 @@
-**********************
-Problem File Structure
-**********************
+********
+Overview
+********
+
+Problem Types
+================
+
+We currently support Four types of problems:
+
+    1. Diff
+    2. Custom
+    3. Multiple Choice
+    4. Free Response
+
+File Structure
+==============
 
 Diff
 ----

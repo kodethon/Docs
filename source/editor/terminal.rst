@@ -20,4 +20,5 @@ Options
 ================
 
 .. cmdoption:: -i
+
 Replace the CDE Shell with the terminal rather than creating a new tab.

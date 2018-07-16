@@ -88,6 +88,7 @@ test
 The test component is where you describe how your test should be run and takes the following fields:
 
 .. cmdoption:: environment
+
 A valid Kodethon environment of the form *environment:tag* that is available within
 the project's settings.
 
@@ -105,13 +106,16 @@ the project's settings.
     - swift:2.2
     
 .. cmdoption:: script
+
 The path to your test script relative to your files. e.g. tests.cpp
 
 .. cmdoption:: command
+
 A shell command that should be able to be executed within the project's terminal. 
 e.g. cmake CMakeLists.txt && make && ./runTests
 
 .. cmdoption:: template
+
 An array or string that dictates the look of the output returned to the user if 
 the output of the test program is in JSON format. Each keyword will be replaced
 with the respective value from the JSON object. For example, if the tempate is:
@@ -141,6 +145,7 @@ then the processed result using the same JSON output will be:
 because the header keyword does not exist in the JSON output but id and score do.
 
 .. cmdoption:: assets
+
 An **optional** array of file paths relative to your test folder that will be soft linked into
 each submission folder. e.g. CMakeLists.txt and tests.cpp
 
@@ -148,6 +153,7 @@ output
 -------------------
 
 .. cmdoption:: filename
+
 The name of the file that will get generated when you run in the CDE Shell:
 
 ::
@@ -155,9 +161,11 @@ The name of the file that will get generated when you run in the CDE Shell:
     score TEST_NAME
     
 .. cmdoption:: format
+
 The format you expect the output file to be. We currently only support csv.
 
 .. cmdoption:: template
+
 An array or string that dictates the look of each row in the output file. The processing
 of the template is the same as the processing for the test ouptut.
 

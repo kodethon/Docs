@@ -1,6 +1,6 @@
-*************
-Diff Problems
-*************
+****
+Diff
+****
 
 .. contents:: Table of Contents 
 
@@ -16,14 +16,16 @@ Components
 ==========
 
 Additional Settings
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 .. cmdoption:: Run Command
+
 The run command should be a UNIX shell command used to execute the submission file. This command will be **run once per test case**.
 
 For example, if the submission file is expected to be called *main.py*, then the corresponding run command should be *python main.py*.
 
 .. cmdoption:: Init Command
+
 The init command should be a UNIX shell command used to prepare the submission for testing. This command will be only **run once**.
 
 For example, specifying *gcc main.c* as the init command will create an executable file *a.out* which can then be used by the run command. 
@@ -91,6 +93,7 @@ The run command will be executed from **within the autograder folder**. Referenc
 For example, if there is a need to reference the file *solution.txt* as shown below:
 
 .. code-block:: text
+
   /home/kodethon/PROBLEM_NAME
     autograder/
       test.sh

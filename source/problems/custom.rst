@@ -1,6 +1,6 @@
-***************
-Custom Problems 
-***************
+******
+Custom
+******
 
 .. contents:: Table of Contents
 
@@ -14,13 +14,10 @@ to ensure that proper read and write permissions have been set prior to student 
 Components
 ==========
 
-Settings
-^^^^^^^^
+Additional Settings
+^^^^^^^^^^^^^^^^^^^
 
-.. cmdoption:: On Start Command
-
-.. cmdoption:: Soft Limit
-
+.. cmdoption:: Test Command
 
 Problem File Structure
 ^^^^^^^^^^^^^^^^^^^^^^

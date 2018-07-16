@@ -1,6 +1,6 @@
-*******************
-Dynamic Custom Problems
-*******************
+*******
+Dynamic
+*******
 
 .. contents:: Table of Contents
 
@@ -11,8 +11,19 @@ Dynamic problems are a special type of a custom problem that allows an instructo
 The instructor can specify their dynamic problem generation script in **On Start Command** setting for **Custom** problems. The 
 **On Start Command** will be triggered when the student copies the assignment or when they view the assignment.
 
-Metadata
-================    
+Components
+==========
+
+Additional Settings
+^^^^^^^^^^^^^^^^^^^
+
+.. cmdoption:: On Start Command
+
+.. cmdoption:: Soft Limit
+
+On Start Metadata
+^^^^^^^^^^^^^^^^^
+
 The path of the metadata file will be passed in a the last argument to your *On Start Command*. 
 The file will be of JSON format as shown below:
 
@@ -35,7 +46,8 @@ The file will be of JSON format as shown below:
     }
     
 Expected Output
-================
+^^^^^^^^^^^^^^^
+
 The below format should be output to stdout as a JSON string:
 
 ::
