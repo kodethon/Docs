@@ -6,3 +6,4 @@ Assignments
     
     overview
     settings
+    groups
