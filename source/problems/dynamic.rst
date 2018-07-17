@@ -7,7 +7,7 @@ Dynamic
 Description
 ================
 
-Dynamic problems are a special type of a custom problem that allows a problem creator  to define the problem description for each user. 
+Dynamic problems are a special type of custom problem that allows a problem creator to provide a unique problem description to each user. 
 The problem creator can specify their dynamic problem generation script in **On Start Command** setting for **Custom** problems. The 
 **On Start Command** will be triggered when the user copies the assignment or when they view the assignment.
 
