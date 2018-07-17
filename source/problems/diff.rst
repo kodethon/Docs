@@ -10,7 +10,7 @@ Description
 A diff problem is named after the UNIX diff command that compares the contents of two files.
 In our case, we diff the output produced by the submitted files with the expected answer. 
 To generate the output from the submitted files, the creator of the problem must specify a **run command**.
-The expected answers are specified as **test cases**; each test case also optionally have arguments and/or stdin.
+The expected answers are specified as **test cases**; each test case also has arguments and/or stdin (optional).
 
 Components
 ==========
@@ -29,6 +29,25 @@ For example, if the submission file is expected to be called *main.py*, then the
 The init command should be a UNIX shell command used to prepare the submission for testing. This command will be only **run once**.
 
 For example, specifying *gcc main.c* as the init command will create an executable file *a.out* which can then be used by the run command. 
+
+.. cmdoption:: Ignore Whitespace
+
+The setting has three options:
+    1. None
+    2. Trailing
+    3. All
+
+The setting defaults to **None** which is a strict comparison of the submission output and the expected answer; every character is expected to match. 
+
+When the setting is set to **Trailing**, all whitespace characters after the last non-whitespace character is ignored.
+
+When the setting is set to **All**, all whitespace is ignored. For example, *HelloWorld* will match the expected answer of *Hello World*.
+
+.. figure:: ../static/courses/create-diff-scoring-settings.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Diff problem scoring settings view
 
 Problem File Structure
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -58,7 +77,7 @@ FAQs
 What happens when a submission is made?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a submission is made for grading, Kodethon will place their submission in a **submission** folder located in the /home/kodethon/.staging folder.
+Upon submission, Kodethon will place the submission files in a **submission** folder located in the /home/kodethon/.staging folder.
 A generated **test.sh** script will be executed from within the autograder folder. The generated test.sh script will run each specified test case and diff the
 results with the expected answer. If the answers match exactly or match given the allowed whitespace settings, then a point is awarded for the submission. 
 Below is an example of what the submission layout looks like for a user named *John Doe*:

@@ -22,12 +22,20 @@ Additional Settings
 The test command should be a UNIX shell command used to initiate testing. 
 This command will be run once from the autograder folder as displayed in the next section.
 
+.. figure:: ../static/courses/create-custom-scoring-settings.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Custom problem scoring settings view
+
 Problem File Structure
 ^^^^^^^^^^^^^^^^^^^^^^
-
+ 
+Below is an outline of the file structure of a submission.
 When a submission is made, Kodethon will place the submission files in the *submission* folder. The specified
 test command will then be executed from within the autograder folder. That is, references to the submission files should be made 
-via **../submission/FILE_NAME**
+via **../submission/FILE_NAME**. Please note that exact path of the submission will be determined during submission and will
+be placed under **/home/kodethon/.staging**.
 
 .. code-block:: yaml
 

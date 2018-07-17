@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Kodethon'
-copyright = u'2017, Kodethon'
+copyright = u'2018, Kodethon'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

@@ -5,3 +5,4 @@ Assignments
     :maxdepth: 1
     
     overview
+    settings

@@ -7,9 +7,10 @@ Overview
 Description
 -----------
 
-An assignment is the first thing that should be created by clicking on the button outlined in red in Figure 1.
+An assignment should be comprised of one or more problems. 
+It is the first thing that should be created by clicking on the button outlined in red in Figure 1.
 
-.. figure:: ../static/courses/create-assignment.PNG
+.. figure:: ../static/courses/assignments.create.PNG
     :align: center
     :figwidth: 100%
 
@@ -20,7 +21,7 @@ An assignment consists of five components:
     2. Submissions
     3. Settings
     4. Extensions
-    5. Files
+    5. Editor
 
 Components
 ----------
@@ -44,15 +45,19 @@ Currently we only support extending the due date for individual students.
 Settings
 ^^^^^^^^
 
-Here you can specify:
-    1. Description
-    2. Allow Submissions Until
-    3. Late Penalty
-    4. Environment
-    5. Grade Exporter
-    
+Assignment settings are divided into three categories:
+    1. Details
+    2. Submission
+    3. Scores
+
 Editor
 ^^^^^^
 
 When you create an assignment, a new container will be created for it. 
 You can interact with the container by accessing the editor view by clicking on 'Files' tab.
+
+.. figure:: ../static/courses/problems.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Each section can be accessed via the left navigation menu

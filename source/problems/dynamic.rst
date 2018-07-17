@@ -27,6 +27,12 @@ every time the number of submissions hits the soft limit count.
 To control after which submission count the on start command should be run again, set the soft limit to a value greater than 0. 
 Otherwise, this setting defaults to 0.
 
+.. figure:: ../static/courses/create-custom-advanced-settings.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Custom problem advanced settings view
+
 On Start Metadata
 ^^^^^^^^^^^^^^^^^
 

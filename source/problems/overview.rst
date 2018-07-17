@@ -2,10 +2,16 @@
 Overview
 ********
 
+Description
+===========
+
+A problem is what users will be providing solutions for. Each assignment shares settings from the **Assignment Settings** 
+i.e. All problems in an assignment will have the same start and end time.
+
 Problem Types
 ================
 
-We currently support Four types of problems:
+We currently support four types of problems:
 
     1. Diff
     2. Custom
@@ -15,14 +21,22 @@ We currently support Four types of problems:
 File Structure
 ==============
 
+The files can be accessed by clicking on the the **Editor** section as highlighted in red below.
+
+.. figure:: ../static/courses/problems.editor.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Editor section 
+
 Diff
 ----
 
-When a diff problem is created, we will generate the scaffold below inside the assignment files.
+When a diff problem is created, we will generate the scaffold below inside the problem folder.
 
 .. code-block:: yaml
 
-    test-name/
+    PROBLEM_NAME/
         autograder/
           .answers/
           .inputs/
@@ -35,7 +49,7 @@ When a diff problem is created, we will generate the scaffold below inside the a
         .submissions/
  
 - autograder/ 
-    The folder that contains all files needed for grading a submission. 
+    The folder that contains all files needed for scoring a submission. 
 
 - autograder/.answers/
     The folder where answer files are stored after being added in the test cases.
@@ -59,7 +73,7 @@ When a diff problem is created, we will generate the scaffold below inside the a
     The snapshots folder is where all submissions are stored. 
 
 - submission/
-    The submission folder can optionally contain a mock submission that can be used to test grading.
+    The submission folder can optionally contain a mock submission that can be used to test scoring.
 
 - .submissions/
     The hidden submissions folder is where the latest submissions will be stored. 
@@ -69,11 +83,11 @@ Custom
 ------
 
 A custom problem allows you to upload a zip file containing relevant test files. 
-When a custom problem is created, we will generate the scaffold below inside the assignment files.
+When a custom problem is created, we will generate the scaffold below inside the problem folder.
 
 .. code-block:: yaml
 
-    test-name/
+    PROBLEM_NAME/
         autograder/
         handout/
         .snapshots/
@@ -81,7 +95,7 @@ When a custom problem is created, we will generate the scaffold below inside the
         .submissions/
  
 - autograder/
-    The folder that contains all files needed for grading a submission. 
+    The folder that contains all files needed for scoring a submission. 
 
 - handout/
     The handout folder should contain the files you expect your users to have. It must contain a file called README.
@@ -90,7 +104,7 @@ When a custom problem is created, we will generate the scaffold below inside the
     The hidden snapshots folder is where all submissions are stored. 
 
 - submission/
-    The test folder can optionally contain a test submission that can be used to test grading.
+    The test folder can optionally contain a test submission that can be used to test scoring.
 
 - .submissions/
     The hidden submissions folder is where the latest submission will be stored. 
