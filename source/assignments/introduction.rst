@@ -1,11 +1,11 @@
-********
-Overview
-********
+************
+Introduction
+************
 
 .. contents:: Table of Contents 
 
-Description
------------
+Overview
+--------
 
 An assignment should be comprised of one or more problems. 
 It is the first thing that should be created by clicking on the button outlined in red in the figure below.
