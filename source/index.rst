@@ -9,8 +9,10 @@ If you have any questions or feedback, please post them at: https://support.kode
     :numbered: 3
     :includehidden:
     
+    introduction/index
     assignments/index
     problems/index
+    submission/index
     editor/index
     advanced/index
 
