@@ -7,15 +7,6 @@ Introduction
 Overview
 --------
 
-An assignment should be comprised of one or more problems. 
-It is the first thing that should be created by clicking on the button outlined in red in the figure below.
-
-.. figure:: ../static/courses/assignments.create.PNG
-    :align: center
-    :figwidth: 100%
-
-    **Figure 1.** Assignments page view
-
 An assignment consists of five components:
     1. Problems
     2. Submissions

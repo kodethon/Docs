@@ -2,16 +2,19 @@
 Import Users
 ************
 
-.. contents:: Table of Contents 
+Importing from a file is a quick way to add users. After a user is imported, he or he will not be immediately notified until specified. 
+To create an assignment, click on the button outlined in red in the figure below.
 
-Description
-===========
+.. figure:: ../static/courses/import-candidate.PNG
+    :align: center
+    :figwidth: 100%
 
-Importing with a text file is a quick way to add users. 
+    **Figure 1.** Where to import users from
+
+Text File Format
+================
+
 The first line must be labeled with **Email** followed by one or more emails. Below is an example of the expected file format. 
-
-Format
-======
 
 .. code-block:: text
 
