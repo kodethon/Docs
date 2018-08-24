@@ -1,7 +1,9 @@
-Introduction
-============
+Getting Started
+===============
 
 .. toctree::
     :maxdepth: 1
     
-    overview
+    import
+    create-assignment
+    create-problem
