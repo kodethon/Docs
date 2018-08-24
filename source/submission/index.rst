@@ -4,7 +4,7 @@ Submission
 .. toctree::
     :maxdepth: 1
     
-    embedded
+    solve-here
     upload
     editor
     groups 
