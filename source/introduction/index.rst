@@ -4,6 +4,7 @@ Getting Started
 .. toctree::
     :maxdepth: 1
     
-    import
+    import-users
     create-assignment
     create-problem
+    notify-users
