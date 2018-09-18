@@ -1,10 +1,10 @@
-# Currently Hosted At
+## Currently Hosted At
 https://docs.kodethon.com
 
 ## Dependencies
 
-0. python pip
-1. Sphinx
+- python pip
+- Sphinx
 
 ### Installing Sphinx via MacPorts
 
