@@ -1,5 +1,7 @@
-## Currently Hosted At
+# Currently Hosted At
 https://docs.kodethon.com
+
+# Installation
 
 ## Dependencies
 
