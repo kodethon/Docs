@@ -1,12 +1,15 @@
-# Currently Hosted At
+## Hosted At
 https://docs.kodethon.com
 
-# Installation
+## Installation
 
-## Dependencies
+First install python pip, for example:
 
-- python pip
-- Sphinx
+```sh
+sudo apt-get install python-pip
+```
+
+Next install Sphinx:
 
 ### Installing Sphinx via MacPorts
 
@@ -38,11 +41,16 @@ sudo pip install sphinxcontrib-httpdomain
 sudo pip install sphinx_rtd_theme
 ```
 
-# How to Build the Docs
-Run 'make html' in the respository root; files will be generated in the 'build' folder.
+## How to Build the Docs
+Make sure you are in the respository root and then run:
 
+```
+make html
+```
 
-# Structure
+Files will be generated in the 'build' folder.
+
+## Structure
 
 Courses
 
