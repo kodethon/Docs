@@ -1,7 +1,8 @@
 ## Hosted At
+
 https://docs.kodethon.com
 
-## Installation
+## Getting Started
 
 First install python pip, for example:
 
@@ -41,7 +42,8 @@ sudo pip install sphinxcontrib-httpdomain
 sudo pip install sphinx_rtd_theme
 ```
 
-## How to Build the Docs
+## Usage
+
 Make sure you are in the respository root and then run:
 
 ```
@@ -49,25 +51,3 @@ make html
 ```
 
 Files will be generated in the 'build' folder.
-
-## Structure
-
-Courses
-
-* Getting Started
-  * Create a problem	
-  * Create a course
-  * Create an assignment
-
-CDE
-
-* Getting Started
-  * Write a program
-  * Run a program
-  * Create project
-  * Share a project
-* Intro to the GUI
-  * File Navigator
-  * Editor
-  * Shell
-  * Apps
