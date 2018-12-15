@@ -43,7 +43,7 @@ Getting the Production Scripts
     environments:
         python: 
             2.7.9: 'jvlythical/python:2.7.9'
-            3.5.2: 'jvlythical/python:2.7.9'
+            3.5.2: 'jvlythical/python:3.5.2'
         c: 'jvlythical/c_cpp:5.4.0'
         go: 'jvlythical/go:1.3.3'
         java: 'jvlythical/java:1.8.0'
