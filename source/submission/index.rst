@@ -7,4 +7,4 @@ Submission
     solve-here
     upload
     editor
-    groups 
+    workspace
