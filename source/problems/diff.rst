@@ -12,11 +12,8 @@ In our case, we diff the output produced by the submitted files with the expecte
 To generate the output from the submitted files, the creator of the problem must specify a **run command**.
 The expected answers are specified as **test cases**; each test case also has arguments and/or stdin (optional).
 
-Components
-==========
-
-Additional Settings
-^^^^^^^^^^^^^^^^^^^
+Settings
+========
 
 .. cmdoption:: Init Command
 
@@ -50,7 +47,7 @@ When the setting is set to **All**, all whitespace is ignored. For example, *Hel
     **Figure 1.** Diff problem scoring settings view
 
 Problem File Structure
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 When a problem is created, the below files are created:
 
@@ -69,54 +66,34 @@ When a problem is created, the below files are created:
     submission/
     .submissions
 
-Please refer to the problem file structure for more details on the purpose of each file.
+- autograder/ 
+    The folder that contains all files needed for scoring a submission. 
 
-FAQs
-====
+- autograder/.answers/
+    The folder where answer files are stored after being added in the test cases.
 
-What happens when a submission is made?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- autograder/.inputs/
+    The folder where stdin files are stored after being added in the test cases.
 
-Upon submission, Kodethon will place the submission files in a **submission** folder located in the /home/kodethon/.staging folder.
-A generated **test.sh** script will be executed from within the autograder folder. The generated test.sh script will run each specified test case and diff the
-results with the expected answer. If the answers match exactly or match given the allowed whitespace settings, then a point is awarded for the submission. 
-Below is an example of what the submission layout looks like for a user named *John Doe*:
+- autograder/.arguments/
+    The folder where argument files are stored after being added in the test cases.
 
-.. code-block:: text
-    
-    /home/kodethon/.staging/John-Doe.12345/PROBLEM_NAME
-      metadata.json
-      autograder/
-        test.sh
-      submission/
-        SUBMISSION_FILES
+- autograder/.utils/
+    Where utility files are stored. This folder should not be modified.
 
+- handout/
+    The handout folder should contain the files you expect your users to have.
 
-The metadata.json file containers information regarding the submitter as shown below:
+- .ref/
+    If you choose to use a reference program, the uploaded file(s) will be stored here
 
-.. code-block:: json
+- .snapshots/
+    The snapshots folder is where all submissions are stored. 
 
-  {
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "johndoe@gmail.com",
-    "environment": "python:2.7.9",
-    "submission_time": "2018-07-13T08:21:55.499+00:00",
-    "deadline": "2018-07-18T08:21:55.499+00:00"
-  } 
+- submission/
+    The submission folder can optionally contain a mock submission that can be used to test scoring.
 
-How do I refer to other files during testing?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- .submissions/
+    The hidden submissions folder is where the latest submissions will be stored. 
+    Inside each submission folder will be the submitted files along with an output file with your test script's output.
 
-The run command will be executed from **within the autograder folder**. References to files should be made with absolute paths. 
-For example, if there is a need to reference the file *solution.txt* as shown below:
-
-.. code-block:: text
-
-  /home/kodethon/PROBLEM_NAME
-    autograder/
-      test.sh
-      solution.txt
-
-The path */home/kodethon/PROBLEM_NAME/autograder/solution.txt* can be used. Please note
-that *PROBLEM_NAME* must be replaced with the actual name of the problem. 
