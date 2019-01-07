@@ -10,7 +10,23 @@ Description
 A diff problem is named after the UNIX diff command that compares the contents of two files.
 In our case, we diff the output produced by the submitted files with the expected answer. 
 To generate the output from the submitted files, the creator of the problem must specify a **run command**.
-The expected answers are specified as **test cases**; each test case also has arguments and/or stdin (optional).
+The expected answers are specified as **test cases**.
+
+For each test case, you can specify:
+    
+    1. Standard input (Optional)
+    2. Arguments (Optional)
+    3. Expected answer (Required)
+    4. Comment (Optional)
+
+When a student submits their program for grading, Kodethon will **generate a test script** based on the problem settings and test cases. 
+For example, if you set standard input to be 'abc' and arguments '1 2 3' for **Test Case 1**, then the generated test command will look like:
+
+::
+    
+    run main.py 1 2 3 < 1 
+
+The specified standard input 'abc' will be written into a file called '1' and redirected into the student's program.
 
 Settings
 ========

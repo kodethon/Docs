@@ -18,13 +18,17 @@ Settings
 
 The test command should be a UNIX shell command used to initiate testing. 
 This command will be run once from the **autograder** folder as shown in the next section.
-The test command print to stdout a JSON string denoting the submissions results or write the JSON string to **submission/results.json**
+The test command should either print to stdout a JSON string denoting the submissions results or write the JSON string to **submission/results.json**
 
 .. figure:: ../static/courses/create-custom-scoring-settings.PNG
     :align: center
     :figwidth: 100%
 
     **Figure 1.** Custom problem scoring settings view
+
+.. cmdoption:: Enable HTML Render
+
+Allows for HTML and CSS files to be rendered as a webpage in the inline editor. Will only be accessible if **Enable Inline Editor** is enabled.
 
 Problem File Structure
 ======================

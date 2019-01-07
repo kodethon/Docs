@@ -17,16 +17,48 @@ We currently support three types of programming problems:
     2. Custom
     3. Dynamic 
 
-Accessing Problem Files
-=======================
+General Settings
+================
 
-The files can be accessed by clicking on the the **Editor** section as highlighted in red below.
+.. cmdoption:: Title
 
-.. figure:: ../static/courses/problems.editor.PNG
-    :align: center
-    :figwidth: 100%
+The name of the problem
 
-    **Figure 1.** Editor section 
+.. cmdoption:: Quesiton Prompt
+
+Should provide information on what the problem is about and how to submit.
+
+.. cmdoption:: Points
+
+How much the problem is worth. The total points for the assignment will be the sum of points for each problem.
+
+.. cmdoption:: Execution Time
+
+To limit how long the submission can run for, you can specify a max execution time in
+seconds. The max execution time will be divided evenly between each test case. For example, if the max execution time was 10 seconds and there are 10 test cases, then each
+test case gets 1 second of execution time. 
+
+.. cmdoption:: Period
+   
+To limit the rate which a submission can be made, you can specific a time in seconds.
+The submitter will receive an error message denoting how much time they have left
+before they can submit again.
+
+.. cmdoption:: Enable Inline Editor
+
+The inline editor is accessed by clicking on the **Solve Here** button in the submission view. It allows for direct editing and submission of code.
+
+.. cmdoption:: Enable Upload
+
+Accessed by clicking on the **Upload** button in the submission view. Allows for a single file or a zip of files to be submitted.
+
+.. cmdoption:: Enable Github
+
+Accessed by clicking on the **Submit From Github** button in the submission view. Allows for a Github repository to be submitted.
+
+.. cmdoption:: Enable CDE
+
+Accessed by clicking on the **Submit from Editor** button in the submission view. Allows for files to be submitted from Kodethon's online editor.
 
 
 Submission File Structure
@@ -95,4 +127,14 @@ The metadata.json file will be of JSON format as shown below:
         }
     }
 
+Accessing Problem Files
+=======================
+
+The files can be accessed by clicking on the the **Editor** section as highlighted in red below.
+
+.. figure:: ../static/courses/problems.editor.PNG
+    :align: center
+    :figwidth: 100%
+
+    **Figure 1.** Editor section 
 
