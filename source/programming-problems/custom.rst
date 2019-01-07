@@ -58,8 +58,8 @@ When a custom problem is created, we will generate the scaffold below inside the
     The hidden submissions folder is where the latest submission will be stored. 
     Inside each submission folder will be the submitted files along with an output file with your test script's output.
 
-Expected Test Command Output
-============================
+Expected Response
+=================
 
 The output can either be directly output to stdout or written to **results.json** in the submissions folder.
 
