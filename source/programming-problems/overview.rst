@@ -11,12 +11,10 @@ i.e. All problems in an assignment will have the same start and end time.
 Problem Types
 ================
 
-We currently support four types of problems:
+We currently support two types of programming problems:
 
     1. Diff
     2. Custom
-    3. Multiple Choice
-    4. Free Response
 
 Accessing Problem Files
 =======================

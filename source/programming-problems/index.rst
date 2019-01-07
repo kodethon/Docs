@@ -1,5 +1,5 @@
-Problems
-========
+Programming Problems
+====================
 
 .. toctree::
     :maxdepth: 1

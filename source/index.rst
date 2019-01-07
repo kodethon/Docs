@@ -11,7 +11,8 @@ If you have any questions or feedback, please post them at: https://support.kode
     
     introduction/index
     assignments/index
-    problems/index
+    standard-problems/index
+    programming-problems/index
     submission/index
     editor/index
     advanced/index
