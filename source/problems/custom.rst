@@ -11,16 +11,14 @@ Custom problems allow the creator to have **full control** on how submissions ar
 Please be aware that the specified test command will be run as the Linux user **nobody**. Extra caution should be made
 to ensure that proper read and write permissions have been set prior to submission.
 
-Components
-==========
-
-Additional Settings
-^^^^^^^^^^^^^^^^^^^
+Settings
+========
 
 .. cmdoption:: Test Command
 
 The test command should be a UNIX shell command used to initiate testing. 
-This command will be run once from the autograder folder as displayed in the next section.
+This command will be run once from the **autograder** folder as shown in the next section.
+The test command print to stdout a JSON string denoting the submissions results or write the JSON string to **submission/results.json**
 
 .. figure:: ../static/courses/create-custom-scoring-settings.PNG
     :align: center
@@ -28,26 +26,44 @@ This command will be run once from the autograder folder as displayed in the nex
 
     **Figure 1.** Custom problem scoring settings view
 
-Problem File Structure
-^^^^^^^^^^^^^^^^^^^^^^
+Submission File Structure
+=========================
  
 Below is an outline of the file structure of a submission.
-When a submission is made, Kodethon will place the submission files in the *submission* folder. The specified
-test command will then be executed from within the autograder folder. That is, references to the submission files should be made 
-via **../submission/FILE_NAME**. Please note that exact path of the submission will be determined during submission and will
+Please note that exact path of the submission will be determined after submission is made and will
 be placed under **/home/kodethon/.staging**.
 
 .. code-block:: yaml
 
     metadata.json
     autograder/
-      TEST_SCRIPTS_IN_PROBLEM_FOLDER
+      FILES_IN_PROBLEM_AUTOGRADER_FOLDER
     output/
       stdout
       stderr
     submission/
       SUBMISSION_FILES
 
+autograder
+^^^^^^^^^^
+The specified **test command** will be executed from within the autograder folder. 
+All files in **/home/kodethon/PROBLEM_NAME/autograder** will be exposed here as a soft link. 
+
+output/stdout
+^^^^^^^^^^^^^
+Contains the stdout of the test command.
+
+output/stderr
+^^^^^^^^^^^^^
+Contains the stderr of the test command.
+
+submission
+^^^^^^^^^^
+When a submission is made, Kodethon will place the submission files in the **submission** folder. That is, references to the submission files should be made 
+via **../submission/FILE_NAME**. 
+
+metadata.json
+^^^^^^^^^^^^^
 The metadata.json file will be of JSON format as shown below:
 
 ::
@@ -76,8 +92,8 @@ The metadata.json file will be of JSON format as shown below:
         }
     }
 
-Expected Output
-^^^^^^^^^^^^^^^
+Expected Test Command Output
+============================
 
 The output can either be directly output to stdout or written to *results.json* in the submissions folder.
 
