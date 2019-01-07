@@ -26,76 +26,42 @@ The test command print to stdout a JSON string denoting the submissions results 
 
     **Figure 1.** Custom problem scoring settings view
 
-Submission File Structure
-=========================
- 
-Below is an outline of the file structure of a submission.
-Please note that exact path of the submission will be determined after submission is made and will
-be placed under **/home/kodethon/.staging**.
+Problem File Structure
+======================
+
+A custom problem allows you to upload a zip file containing relevant test files. 
+When a custom problem is created, we will generate the scaffold below inside the problem folder.
 
 .. code-block:: yaml
 
-    metadata.json
-    autograder/
-      FILES_IN_PROBLEM_AUTOGRADER_FOLDER
-    output/
-      stdout
-      stderr
-    submission/
-      SUBMISSION_FILES
+    PROBLEM_NAME/
+        autograder/
+        handout/
+        .snapshots/
+        submission/
+        .submissions/
+ 
 
-autograder
-^^^^^^^^^^
-The specified **test command** will be executed from within the autograder folder. 
-All files in **/home/kodethon/PROBLEM_NAME/autograder** will be exposed here as a soft link. 
+- autograder/
+    The folder that contains all files needed for scoring a submission. 
 
-output/stdout
-^^^^^^^^^^^^^
-Contains the stdout of the test command.
+- handout/
+    The handout folder should contain the files you expect your users to have. It must contain a file called README.
 
-output/stderr
-^^^^^^^^^^^^^
-Contains the stderr of the test command.
+- .snapshots/
+    The hidden snapshots folder is where all submissions are stored. 
 
-submission
-^^^^^^^^^^
-When a submission is made, Kodethon will place the submission files in the **submission** folder. That is, references to the submission files should be made 
-via **../submission/FILE_NAME**. 
+- submission/
+    The test folder can optionally contain a test submission that can be used to test scoring.
 
-metadata.json
-^^^^^^^^^^^^^
-The metadata.json file will be of JSON format as shown below:
-
-::
-
-    {
-        first_name: "John",
-        last_name: "Doe",
-        email: "sample@gmail.com",
-        submission_time: "2017-11-26 23:21:02 -0800",
-        deadline: "2017-11-30 23:21:02 -0800",
-        previous_submissions: [
-            {
-                output: "Hello World!",
-                cache: "<DATA DEFINED BY YOU>",
-                remaining_attempts: 5,
-                created_at: "2017-11-25 23:21:02 -0800",
-                score: 100
-            },
-            ...
-        ],
-        on_start: {
-            "description": "<DESCRIPTION OF PROBLEM>",
-            "created_at": "2017-12-08T05:31:49.093Z",
-            "updated_at": "2017-12-13T11:19:11.970Z",
-            "data": "<DATA YOUR PROBLEM MAY NEED>"
-        }
-    }
+- .submissions/
+    The hidden submissions folder is where the latest submission will be stored. 
+    Inside each submission folder will be the submitted files along with an output file with your test script's output.
 
 Expected Test Command Output
 ============================
 
-The output can either be directly output to stdout or written to *results.json* in the submissions folder.
+The output can either be directly output to stdout or written to **results.json** in the submissions folder.
 
 ::
 
