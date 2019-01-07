@@ -78,6 +78,21 @@ The output can either be directly output to stdout or written to **results.json*
             "max_score": 1.0, 
             "name": "<TEST NAME>",
             "output": "<TEST CASE OUTPUT>",
-            "visibility": "visible" 
         }] // Optional
-    }     
+    }
+
+- score (Required)
+
+    An float that will represent the overall score for the submission.
+
+- output (Optional)
+
+    A string that will be displayed as the submission result.
+
+- cache (Optional)
+
+    Can be used to save data for grading the next submission.
+
+- tests (Optional)
+    
+    An array of cases that provides additional information regarding how the submission was graded.
