@@ -53,7 +53,28 @@ The file will be of JSON format as shown below:
             ...
         ]
     }
-    
+
+
+- first_name
+
+    A string describing the first name of the submitter.
+
+- last_name
+
+    A string describing the last name of the submitter.
+
+- email
+
+    A string describing the email of the submitter.
+
+- timestamp
+
+    A timestamp string describing when the submission was made.
+
+- previous
+
+    A list of previously generated on start responses.
+
 Expected Response
 =================
 
