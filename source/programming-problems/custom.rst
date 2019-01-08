@@ -104,10 +104,12 @@ General response descriptions:
 Test case response descriptions:
 
 - name (Optional)
-
-    The score received for this test case.
+    
+    A label for the test case.
 
 - score (Required)
+
+    The score received for this test case.
 
 - max_score (Required)
 
