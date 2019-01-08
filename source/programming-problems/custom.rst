@@ -70,20 +70,24 @@ The output can either be directly output to stdout or written to **results.json*
 ::
 
     {
-        score: "<RAW SCORE (NON-PERCENT)>",
-        output: "<PROGRAM OUTPUT (OPTIONAL)>",
-        cache: "<DATA TO SAVE (OPTIONAL)>",
+        score: "0.0",
+        output: "Your submission was received.",
+        cache: "Student failed Test Case 1",
         tests: [{
-            "score": 1.0, 
+            "name": "Test Case 1",
+            "score": 0.0, 
             "max_score": 1.0, 
-            "name": "<TEST NAME>",
-            "output": "<TEST CASE OUTPUT>",
+            "output": "Hello World",
+            "answer": "Hello World!"
         }] // Optional
     }
 
-- score (Required)
+General response descriptions:
 
-    An float that will represent the overall score for the submission.
+- score (Conditionally Required)
+
+    A float that will represent the overall score for the submission. If no score is provided, sum of test case scores will be used instead. 
+    This attribute will take precedence over sum of test case scores.
 
 - output (Optional)
 
@@ -96,6 +100,26 @@ The output can either be directly output to stdout or written to **results.json*
 - tests (Optional)
     
     An array of cases that provides additional information regarding how the submission was graded.
+
+Test case response descriptions:
+
+- name (Optional)
+
+    The score received for this test case.
+
+- score (Required)
+
+- max_score (Required)
+
+    The maximum score for this test case.
+
+- output (Optional)
+
+    The output that the submittter will see.
+
+- answer (optional)
+
+    The expected answer the test case was supposed to output.
 
 Sample Test Script
 ==================
