@@ -6,4 +6,4 @@ Assignments
     
     introduction
     settings
-    groups
+    teams
