@@ -116,7 +116,8 @@ When a problem is created, the below files are created:
 Submission File Structure
 =========================
 
-When a submission is made, we will generate the following folders under a new path in .submissions
+When a submission is made, we will generate the following folders under a new path in **.submissions**.
+Please see **section 4.1.4** for more details.
 
 - autograder/
     This folder contains symbolic links to all files in the problem's autograder folder 
