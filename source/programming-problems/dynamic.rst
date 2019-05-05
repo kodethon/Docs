@@ -7,7 +7,7 @@ Dynamic
 Description
 ===========
 
-Dynamic problems are a special type of custom problem that allows a problem creator to provide a unique problem description to each user. 
+Dynamic problems are a special type of **custom problem** that allows a problem creator to provide a unique problem description to each user. 
 The problem creator can specify their dynamic problem generation script in **On Start Command** setting for **Custom** problems. The 
 **On Start Command** will be triggered when the user copies the assignment or when they view the assignment.
 
@@ -33,7 +33,8 @@ Otherwise, this setting defaults to 0.
 On Start Metadata
 =================
 
-The path of the metadata file will be passed in a the last argument to your *On Start Command*. 
+On start metadata can provide information to the **On Start Command** to determine what problem to generate.
+The path of the metadata file will be passed in as the last argument to your **On Start Command**. 
 The file will be of JSON format as shown below:
 
 ::

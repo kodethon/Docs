@@ -8,8 +8,8 @@ Description
 ===========
 
 Custom problems allow the creator to have **full control** on how submissions are scored. 
-Please be aware that the specified test command will be run as the Linux user **nobody**. Extra caution should be made
-to ensure that proper read and write permissions have been set prior to submission.
+Please be aware that the specified test command will be run as the Linux user **nobody**. 
+This means that extra caution should be made to ensure that proper permissions have been set prior to submission.
 
 Settings
 ========
@@ -34,7 +34,7 @@ Problem File Structure
 ======================
 
 A custom problem allows you to upload a zip file containing relevant test files. 
-When a custom problem is created, we will generate the scaffold below inside the problem folder.
+When a custom problem is created, we will generate the folders in /home/kodethon:
 
 .. code-block:: yaml
 
@@ -44,34 +44,104 @@ When a custom problem is created, we will generate the scaffold below inside the
         .snapshots/
         submission/
         .submissions/
- 
+
+- PROBLEM_NAME/
+    This folder will be named ater the problem's title. It will contain the rest of the folders.
 
 - autograder/
     The folder that contains all files needed for scoring a submission. 
 
 - handout/
-    The handout folder should contain the files you expect your users to have. It must contain a file called README.
+    The handout folder should contain the files you expect your users to have. 
+    For example, it may contain a file called README.
 
 - .snapshots/
     The hidden snapshots folder is where all submissions are stored. 
 
 - submission/
-    The test folder can optionally contain a test submission that can be used to test scoring.
+    The test folder can optionally contain a mock submission that can be used to test scoring.
 
 - .submissions/
     The hidden submissions folder is where the latest submission will be stored. 
     Inside each submission folder will be the submitted files along with an output file with your test script's output.
 
+
+Submission File Structure
+=========================
+
+When a submission is made, we will generate the following folders under a new path in .submissions
+
+- autograder/
+    This folder contains symbolic links to all files in the problem's autograder folder 
+
+- submission/
+    This folder contains the submission files
+
+- output/ 
+    It is recommended to place log files here.
+
+A sample submission path will look like:
+
+.. code-block:: text
+  
+    /home/kodethon/PROBLEM_NAME/.submissions/SUBMISSION_FOLDER
+
+Writing a Test Script
+=====================
+
+Below is a recommended outline of a test script:
+
+**1. Accessing the Submission**
+
+We first start in the **autograder** folder, but the the submission files are kept in a separate folder.
+To access the submission files, let's move into the **submission** folder.
+
+.. code-block:: shell
+
+    submission_path=../submission
+    cd $submission_path
+
+**2. Getting Additional Test Files (Optional)**
+
+Even though test files should be placed in the autograder folder. 
+You may want to link additonal files into the **submission** folder.
+Let's assume some test files (TEST_FILES_PATH) need to be linked.
+
+.. code-block:: shell
+
+    ln -sf TEST_FILES_PATH $submission_path
+
+**3. Running the Submission**
+
+Once we are in the **submission** folder, let's run the submission. 
+As an example, let the submission be called **submission.py**.
+In the example below, it is completely optional to save the output into **../output/stdout**
+
+.. code-block:: shell
+
+    python submission.py > ../output/stdout
+    
+**4. Formatting Results**
+
+Finally, let's format the output to something Kodethon expects and write it to **results.json**
+As an example, our formating script is **adapter.py**. Notice how it is referenced as **../autograder/adapter.py**.
+This is because we are currently in the **submission** folder and grading scripts are kept in the **autograder** folder.
+In the next section, we provide details on how to format the results.
+
+.. code-block:: shell
+
+  cat ../output/stdout | python ../autograder/adapter.py > results.json
+
+
 Expected Response
 =================
 
-The output can either be directly output to stdout or written to **results.json** in the submissions folder.
+The submission results must written to **results.json** in the **submissions** folder.
 
 ::
 
     {
         score: "0.0",
-        output: "Your submission was received.",
         cache: "Student failed Test Case 1",
         tests: [{
             "name": "Test Case 1",
@@ -88,10 +158,6 @@ General response descriptions:
 
     A float that will represent the overall score for the submission. If no score is provided, sum of test case scores will be used instead. 
     This attribute will take precedence over sum of test case scores.
-
-- output (Optional)
-
-    A string that will be displayed as the submission result.
 
 - cache (Optional)
 
@@ -122,32 +188,3 @@ Test case response descriptions:
 - answer (optional)
 
     The expected answer the test case was supposed to output.
-
-Sample Test Script
-==================
-
-.. code-block:: shell
-
-    ###
-    # Below is an outline of how to write a custom script
-    ###
-
-    # The current directoy is 'autograder'
-    # The submitted files are located in ../submission
-    submission_path=../submission
-
-    # Step 1.
-    # Let's assume some test files (TEST_FILES) need to be linked into the submission folder
-    ln -sf TEST_FILES $submission_path
-
-    # Step 2.
-    # Move into the submission folder
-    cd $submission_path
-
-    # Step 3.
-    # Let's assume the submission is called 'submission.py'
-    # and we have a script to convert output to Kodethon's expected output called 'adapter.py'
-    #   a. Run the submission
-    #   b. Format the output to something Kodethon expects, see https://docs.kodethon.com/problems/custom.html
-    #   c. Write results to results.json
-    python submission.py | python adapter.py > results.json

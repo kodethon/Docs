@@ -113,3 +113,22 @@ When a problem is created, the below files are created:
     The hidden submissions folder is where the latest submissions will be stored. 
     Inside each submission folder will be the submitted files along with an output file with your test script's output.
 
+Submission File Structure
+=========================
+
+When a submission is made, we will generate the following folders under a new path in .submissions
+
+- autograder/
+    This folder contains symbolic links to all files in the problem's autograder folder 
+
+- submission/
+    This folder contains the submission files
+
+- output/ 
+    It is recommended to place log files here.
+
+A sample submission path will look like:
+
+.. code-block:: text
+  
+    /home/kodethon/PROBLEM_NAME/.submissions/SUBMISSION_FOLDER
