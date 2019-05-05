@@ -149,7 +149,8 @@ The submission results must written to **results.json** in the **submissions** f
             "score": 0.0, 
             "max_score": 1.0, 
             "output": "Hello World",
-            "answer": "Hello World!"
+            "answer": "Hello World!",
+            "comment": "Please review chapter 1, section 1"
         }] // Optional
     }
 
@@ -162,7 +163,7 @@ General response descriptions:
 
 - cache (Optional)
 
-    Can be used to save data for grading the next submission.
+    Can be used to save data for grading the next submission. This information will be saved in **metadata.json**
 
 - tests (Optional)
     
@@ -186,6 +187,10 @@ Test case response descriptions:
 
     The output that the submittter will see.
 
-- answer (optional)
+- answer (Optional)
 
     The expected answer the test case was supposed to output.
+
+- comment (Optional)
+
+   Feedback that the submitter will see. 
